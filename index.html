@@ -9,14 +9,15 @@
   <meta name="description" content="Graduation Vaults are transparent, time-locked donation vaults for modern microschools — powered by decentralized, multi-signature custody.">
   <meta name="author" content="Self-Defi | SD Advisory Group">
 
-  <!-- Favicon / Social (update paths as needed) -->
+  <!-- Favicon / Social -->
   <link rel="icon" type="image/png" href="assets/images/self-defi-logo.png">
   <meta property="og:title" content="Graduation Vaults">
-  <meta property="og:description" content="A transparent, decentralized custody framework for modern microschools.">
+  <meta property="og:description" content="A transparent, decentralized digital infrastructure framework for modern microschools.">
   <meta property="og:image" content="assets/images/gv-hero.jpg">
   <meta property="og:type" content="website">
 
   <style>
+    /* ——— ROOT + GLOBAL ——— */
     :root {
       --bg-cream: #f7f2e8;
       --bg-light: #fcfaf6;
@@ -31,11 +32,7 @@
       --transition-fast: 0.2s ease-out;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       margin: 0;
@@ -50,9 +47,7 @@
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
 
     .page-wrap {
       max-width: 1120px;
@@ -60,6 +55,7 @@
       padding: 20px 16px 60px;
     }
 
+    /* ——— HEADER ——— */
     header.site-header {
       display: flex;
       align-items: center;
@@ -68,11 +64,7 @@
       padding: 8px 0 12px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .brand { display: flex; align-items: center; gap: 10px; }
 
     .brand-logo {
       width: 40px;
@@ -92,10 +84,7 @@
       color: var(--accent-blue);
     }
 
-    .brand-text-sub {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
+    .brand-text-sub { font-size: 0.8rem; color: var(--text-muted); }
 
     nav.nav {
       display: flex;
@@ -106,11 +95,10 @@
     }
 
     nav.nav a {
-      text-decoration: none;
-      color: var(--text-main);
       padding-bottom: 2px;
       border-bottom: 1px solid transparent;
       transition: var(--transition-fast);
+      color: var(--text-main);
     }
 
     nav.nav a:hover {
@@ -126,21 +114,13 @@
       border-bottom: none !important;
     }
 
-    .nav-cta:hover {
-      background: #003f74;
-    }
+    .nav-cta:hover { background: #003f74; }
 
-    main {
-      margin-top: 20px;
-    }
+    /* ——— LAYOUT ——— */
+    main { margin-top: 20px; }
+    section { margin-bottom: 54px; }
 
-    section {
-      margin-bottom: 54px;
-    }
-
-    .section-header {
-      margin-bottom: 16px;
-    }
+    .section-header { margin-bottom: 16px; }
 
     .section-eyebrow {
       text-transform: uppercase;
@@ -150,35 +130,14 @@
       margin-bottom: 6px;
     }
 
-    h1, h2, h3 {
-      letter-spacing: 0.02em;
-    }
+    h1, h2, h3 { letter-spacing: 0.02em; }
+    h1 { font-size: 2.2rem; margin-bottom: 10px; color: var(--accent-blue); }
+    h2 { font-size: 1.6rem; margin-bottom: 8px; color: var(--accent-blue); }
+    h3 { font-size: 1.05rem; margin-bottom: 4px; }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      color: var(--accent-blue);
-    }
+    p.lead { font-size: 1.05rem; color: var(--text-muted); max-width: 680px; }
 
-    h2 {
-      font-size: 1.6rem;
-      margin-bottom: 8px;
-      color: var(--accent-blue);
-    }
-
-    h3 {
-      font-size: 1.05rem;
-      margin-bottom: 4px;
-    }
-
-    p.lead {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 680px;
-    }
-
-    /* Hero */
-
+    /* ——— HERO ——— */
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -198,12 +157,7 @@
       margin-bottom: 8px;
     }
 
-    .hero-sub {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 540px;
-      margin-bottom: 16px;
-    }
+    .hero-sub { font-size: 1rem; color: var(--text-muted); max-width: 540px; margin-bottom: 16px; }
 
     .hero-tagline {
       font-size: 0.9rem;
@@ -230,9 +184,8 @@
       font-weight: 600;
       border: none;
       cursor: pointer;
-      text-decoration: none;
-      transition: var(--transition-fast);
       white-space: nowrap;
+      transition: var(--transition-fast);
     }
 
     .btn-primary {
@@ -241,27 +194,17 @@
       box-shadow: 0 10px 22px rgba(0, 83, 155, 0.25);
     }
 
-    .btn-primary:hover {
-      background: #003f74;
-      text-decoration: none;
-    }
+    .btn-primary:hover { background: #003f74; }
 
     .btn-outline {
       background: transparent;
       color: var(--accent-blue);
-      border: 1px solid rgba(0, 83, 155, 0.35);
+      border: 1px solid rgba(0,83,155,0.35);
     }
 
-    .btn-outline:hover {
-      background: rgba(0,83,155,0.06);
-      text-decoration: none;
-    }
+    .btn-outline:hover { background: rgba(0,83,155,0.06); }
 
-    .hero-footnote {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
+    .hero-footnote { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
 
     .hero-image-wrap {
       border-radius: 22px;
@@ -274,16 +217,13 @@
       width: 100%;
       display: block;
       border-radius: 22px;
-      outline: none;
     }
 
-    /* Two-column and cards */
-
+    /* ——— TWO COLUMN + CARDS ——— */
     .two-column {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 26px;
-      align-items: flex-start;
     }
 
     .about-card {
@@ -293,20 +233,8 @@
       box-shadow: var(--shadow-soft);
     }
 
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .pill {
-      font-size: 0.75rem;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: rgba(0,83,155,0.06);
-      color: var(--accent-blue);
-    }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .pill { font-size: 0.75rem; padding: 4px 9px; border-radius: 999px; background: rgba(0,83,155,0.06); color: var(--accent-blue); }
 
     .cards-grid {
       display: grid;
@@ -323,18 +251,8 @@
       box-shadow: 0 3px 12px rgba(0,0,0,0.03);
     }
 
-    .card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .card-tag {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--accent-gold);
-      margin-bottom: 4px;
-    }
+    .card p { font-size: 0.9rem; color: var(--text-muted); }
+    .card-tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent-gold); margin-bottom: 4px; }
 
     .resource-grid {
       display: grid;
@@ -348,56 +266,15 @@
       border-radius: var(--radius-md);
       padding: 14px 12px;
       border: 1px solid var(--card-border);
+      min-height: 150px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 150px;
     }
 
-    .resource-card h3 {
-      margin-bottom: 6px;
-    }
+    .resource-card .btn-sm { padding: 7px 12px; font-size: 0.8rem; }
 
-    .resource-card p {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .resource-meta {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .resource-card .btn-sm {
-      padding: 7px 12px;
-      font-size: 0.8rem;
-    }
-
-    .list-dash {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 6px;
-    }
-
-    .list-dash li::before {
-      content: "– ";
-    }
-
-    .list-dash li {
-      margin-bottom: 4px;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .highlight {
-      font-weight: 600;
-      color: var(--accent-blue);
-    }
-
-    /* CTA band */
-
+    /* ——— CTA BAND ——— */
     .cta-band {
       margin-top: 10px;
       padding: 18px 16px;
@@ -407,15 +284,12 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      align-items: center;
       justify-content: space-between;
     }
 
-    .cta-band p {
-      max-width: 520px;
-      font-size: 0.95rem;
-    }
+    .cta-band p { max-width: 520px; font-size: 0.95rem; }
 
+    /* ——— FOOTER ——— */
     footer.site-footer {
       margin-top: 20px;
       padding-top: 18px;
@@ -424,59 +298,25 @@
       color: var(--text-muted);
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
       justify-content: space-between;
+      gap: 12px;
     }
-
-    footer .footer-right {
-      text-align: right;
-    }
-
-    /* Responsive */
 
     @media (max-width: 900px) {
-      .hero,
-      .two-column {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero {
-        padding: 20px 16px;
-      }
-
-      .cards-grid,
-      .resource-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      header.site-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav.nav {
-        justify-content: flex-start;
-      }
-
-      .page-wrap {
-        padding: 16px 14px 40px;
-      }
-
-      footer.site-footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      footer .footer-right {
-        text-align: left;
-      }
+      .hero, .two-column { grid-template-columns: 1fr; }
+      .cards-grid, .resource-grid { grid-template-columns: 1fr; }
+      header.site-header { flex-direction: column; align-items: flex-start; }
+      nav.nav { justify-content: flex-start; }
+      .page-wrap { padding: 16px 14px 40px; }
+      footer.site-footer { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 
 <body>
   <div class="page-wrap">
-    <!-- Header -->
+
+    <!-- ——— HEADER ——— -->
     <header class="site-header">
       <div class="brand">
         <img src="assets/images/self-defi-logo.png" alt="Self-Defi Shield Logo" class="brand-logo">
@@ -496,18 +336,24 @@
       </nav>
     </header>
 
+    <!-- ——— MAIN CONTENT ——— -->
     <main>
-      <!-- HERO -->
+
+      <!-- ——— HERO ——— -->
       <section class="hero" id="top">
         <div>
           <div class="hero-kicker">Unlock Tomorrow. Today.</div>
+
           <h1>A Transparent, Decentralized Custody Framework for Modern Microschools.</h1>
+
           <p class="hero-sub">
-            Graduation Vaults are time-locked donation vaults built for each student — governed by multi-signature
-            approvals and zero-custody infrastructure. No pooled funds, no hidden accounts, and no early access.
+            Graduation Vaults are time-locked donation vaults built for each student — 
+            governed by multi-signature approvals and zero-custody infrastructure.
+            No pooled funds, no hidden accounts, and no early access.
           </p>
+
           <p class="hero-tagline">
-            Empower students. Build legacy. Sovereign Wealth Architecture — Powered by Self-Defi.
+            Empower students. Build legacy. Digital Infrastructure Architect — Powered by Self-Defi.
           </p>
 
           <div class="hero-cta-row">
@@ -524,36 +370,34 @@
         </div>
 
         <div class="hero-image-wrap">
-          <video
-            controls
-            playsinline
-            preload="metadata"
-            poster="assets/images/gv-hero.jpg"
-          >
+          <video controls playsinline preload="metadata" poster="assets/images/gv-hero.jpg">
             <source src="https://ipfs.io/ipfs/bafybeicyucgtycj7rfsp56vqzwhvltmxjqg3grtx2zbf73vqyis44ymtue" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
       </section>
 
-      <!-- ABOUT SELF-DEFI -->
+      <!-- ——— ABOUT SELF-DEFI ——— -->
       <section id="about">
         <div class="two-column">
           <div>
             <div class="section-header">
               <div class="section-eyebrow">About Self-Defi</div>
-              <h2>Zero-Custody Infrastructure for Sovereign Wealth Architecture.</h2>
+              <h2>Zero-Custody Infrastructure for Digital Architecture.</h2>
             </div>
+
             <div class="about-card">
               <p>
-                Self-Defi provides secure, self-custody infrastructure for individuals and organizations.
-                Our mission is to give communities the tools to build sovereign, transparent wealth systems — 
-                without intermediaries holding their funds or making decisions for them.
+                Self-Defi provides secure, self-custody digital infrastructure for individuals and organizations.
+                Our mission is to give communities the tools to build transparent systems without intermediaries holding funds 
+                or making decisions for them.
               </p>
+
               <p style="margin-top:10px;">
                 With Graduation Vaults, schools, parents, trustees, and donors keep full control.
                 SD Advisory Group is <span class="highlight">not</span> a custodian:
               </p>
+
               <ul class="list-dash">
                 <li>We do not hold private keys or approval authority.</li>
                 <li>We do not provide investment products, yields, or fund management.</li>
@@ -575,7 +419,7 @@
         </div>
       </section>
 
-      <!-- HOW IT WORKS -->
+      <!-- ——— HOW IT WORKS ——— -->
       <section id="how-it-works">
         <div class="section-header">
           <div class="section-eyebrow">How It Works</div>
@@ -592,8 +436,8 @@
             <h3>3-of-4 Multi-Signature With Parent Required</h3>
             <p>
               Every vault is controlled by four adults: Parent/Guardian (mandatory), School Representative,
-              Teacher/Staff or Counselor, and an Independent Trustee or Community Oversight member. Any withdrawal — 
-              including graduation unlock — requires three approvals and the parent is always one of them.
+              Teacher/Staff or Counselor, and an Independent Trustee or Community Oversight member. 
+              Any withdrawal — including graduation unlock — requires three approvals and the parent is always one of them.
             </p>
           </div>
 
@@ -613,7 +457,7 @@
             <p>
               Students and parents receive read-only dashboards showing current balance, donation history, contributors,
               lock status, and graduation countdown. Donors can monitor progress 24-7 through public, auditable vault
-              data — no logins required for viewing.
+              data — no logins required.
             </p>
           </div>
 
@@ -621,19 +465,19 @@
             <div class="card-tag">Scope</div>
             <h3>Student Vaults + School Innovation Vault</h3>
             <p>
-              In addition to individual Graduation Vaults, schools may also operate a transparent Innovation Vault — 
-              a 2-of-3 multi-sig account for campus-wide upgrades, partnerships, and enrichment programs. All activity
-              is public, and SD Advisors still holds zero keys.
+              Schools may also operate a transparent Innovation Vault — a 2-of-3 multi-sig account for campus-wide 
+              upgrades and enrichment programs. All activity is public, and SD Advisors still holds zero keys.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- WHO IT'S FOR -->
+      <!-- ——— WHO IT'S FOR ——— -->
       <section id="who-its-for">
         <div class="section-header">
           <div class="section-eyebrow">Who It’s For</div>
           <h2>Aligned Roles, Clear Responsibilities.</h2>
+
           <p class="lead">
             Graduation Vaults are designed so each group knows exactly what they are — and are not — responsible for.
           </p>
@@ -642,11 +486,10 @@
         <div class="cards-grid">
           <div class="card">
             <div class="card-tag">Students & Families</div>
-            <h3>Future-Focused, Not Speculative</h3>
+            <h3>Future-Focused, Not Financial Products</h3>
             <p>
               Students receive a protected vault that unlocks at graduation, not an investment account.
-              Parents act as mandatory signers, approve withdrawals, and can monitor progress through a
-              read-only dashboard at any time.
+              Parents act as mandatory signers and can monitor progress anytime.
             </p>
           </div>
 
@@ -654,9 +497,8 @@
             <div class="card-tag">School Staff</div>
             <h3>Administrative, Not Financial Custody</h3>
             <p>
-              School Representatives and Staff signers verify enrollment, review emergency requests when needed,
-              and help families understand the system. They never custody crypto, never move funds, and cannot decide
-              how donations are spent on their own.
+              Staff verify enrollment, review emergency requests, and support families. 
+              They do not custody crypto or move funds.
             </p>
           </div>
 
@@ -664,8 +506,8 @@
             <div class="card-tag">Trustees & Community</div>
             <h3>Neutral Oversight, Zero Fund Control</h3>
             <p>
-              Trustees provide neutral checks and balances. They review emergency requests and governance changes,
-              but they never hold or manage money. Their key is only used during major decisions requiring oversight.
+              Trustees provide checks and balances. They never hold or manage money — 
+              their role is governance oversight only.
             </p>
           </div>
 
@@ -673,15 +515,14 @@
             <div class="card-tag">Donors & Sponsors</div>
             <h3>Transparent, Trackable Gifts</h3>
             <p>
-              Donors can choose a student or contribute to the School Innovation Vault, send funds directly on-chain,
-              and verify delivery instantly. Every contribution is a gift — transparent, trackable, and time-locked for
-              the student or school community.
+              Donors choose a student or Innovation Vault and send funds directly on-chain.
+              Every contribution is a gift — transparent, trackable, and time-locked.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- ONBOARDING GUIDES -->
+      <!-- ——— ONBOARDING GUIDES ——— -->
       <section id="onboarding">
         <div class="section-header">
           <div class="section-eyebrow">Onboarding</div>
@@ -695,97 +536,72 @@
           <div class="resource-card">
             <div>
               <h3>Student Guide</h3>
-              <div class="resource-meta">How your Graduation Vault works & what it means.</div>
-              <p>
-                Explains the vault, time-lock, emergency rules, transfers, and the student’s responsibility to
-                protect their dashboard access.
-              </p>
+              <div class="resource-meta">Video + Full PDF</div>
+              <p>How your vault works, time-lock rules, dashboard access, and emergency policy.</p>
             </div>
-            <a class="btn btn-outline btn-sm" href="assets/pdfs/student-onboarding.pdf" target="_blank" rel="noopener">
-              Download Student Guide
-            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank">▶ Watch Video (5 min)</a>
+            <a class="btn btn-outline btn-sm" style="margin-top:8px;" href="assets/pdfs/student-onboarding.pdf" target="_blank">⬇ Download Guide (PDF)</a>
           </div>
 
           <div class="resource-card">
             <div>
-              <h3>Parent Onboarding Packet</h3>
-              <div class="resource-meta">3-of-4 multisig, Phantom setup, donation flow.</div>
-              <p>
-                Walks parents through wallet setup, donations, dashboard viewing, emergency policy, and FAQs — 
-                with the parent always required as a signer.
-              </p>
+              <h3>Parent Onboarding</h3>
+              <div class="resource-meta">Wallet setup, roles, donation flow.</div>
+              <p>Explains Phantom setup, donation process, dashboard viewing, and key responsibilities.</p>
             </div>
-            <a class="btn btn-outline btn-sm" href="assets/pdfs/parent-onboarding.pdf" target="_blank" rel="noopener">
-              Download Parent Packet
-            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank">▶ Watch Video (5 min)</a>
+            <a class="btn btn-outline btn-sm" style="margin-top:8px;" href="assets/pdfs/parent-onboarding.pdf" target="_blank">⬇ Download Parent Packet</a>
           </div>
 
           <div class="resource-card">
             <div>
               <h3>School Staff Onboarding</h3>
               <div class="resource-meta">Administrative duties & security practices.</div>
-              <p>
-                Clarifies what staff are responsible for — and equally important, what they are not — while holding
-                signing credentials safely.
-              </p>
+              <p>Clarifies staff responsibilities while holding signing credentials safely.</p>
             </div>
-            <a class="btn btn-outline btn-sm" href="assets/pdfs/staff-onboarding.pdf" target="_blank" rel="noopener">
-              Download Staff Guide
-            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank">▶ Watch Video (5 min)</a>
+            <a class="btn btn-outline btn-sm" style="margin-top:8px;" href="assets/pdfs/staff-onboarding.pdf" target="_blank">⬇ Download Staff Guide</a>
           </div>
 
           <div class="resource-card">
             <div>
               <h3>Trustee / Community Oversight</h3>
               <div class="resource-meta">Neutral governance & emergency review.</div>
-              <p>
-                Outlines how trustees evaluate emergency requests, maintain neutrality, and protect the integrity
-                of the system without ever holding student funds.
-              </p>
+              <p>Role, responsibilities, emergency criteria, and neutrality requirements.</p>
             </div>
-            <a class="btn btn-outline btn-sm" href="assets/pdfs/trustee-onboarding.pdf" target="_blank" rel="noopener">
-              Download Trustee Guide
-            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank">▶ Watch Video (5 min)</a>
+            <a class="btn btn-outline btn-sm" style="margin-top:8px;" href="assets/pdfs/trustee-onboarding.pdf" target="_blank">⬇ Download Trustee Guide</a>
           </div>
 
           <div class="resource-card">
             <div>
-              <h3>Donor to Student</h3>
-              <div class="resource-meta">Transparent, time-locked support for one student.</div>
-              <p>
-                Explains how individual donors choose a student vault, contribute, and track donations over time — 
-                with clear language that this is a gift, not an investment product.
-              </p>
+              <h3>Donor → Student</h3>
+              <div class="resource-meta">Transparent, time-locked support.</div>
+              <p>How individual donors contribute and track a student vault over time.</p>
             </div>
-            <a class="btn btn-outline btn-sm" href="assets/pdfs/donor-to-student.pdf" target="_blank" rel="noopener">
-              Donor → Student PDF
-            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank">▶ Watch Video (5 min)</a>
+            <a class="btn btn-outline btn-sm" style="margin-top:8px;" href="assets/pdfs/donor-to-student.pdf" target="_blank">⬇ Donor → Student PDF</a>
           </div>
 
           <div class="resource-card">
             <div>
-              <h3>School Donor & Sponsor</h3>
-              <div class="resource-meta">Innovation Vault for campus-wide upgrades.</div>
-              <p>
-                Designed for organizations and sponsors funding a school-level Innovation Vault with full
-                on-chain transparency and 2-of-3 multi-sig governance.
-              </p>
+              <h3>School Sponsors</h3>
+              <div class="resource-meta">Innovation Vault overview.</div>
+              <p>How organizations fund the Innovation Vault with full transparency.</p>
             </div>
-            <a class="btn btn-outline btn-sm" href="assets/pdfs/donor-to-school.pdf" target="_blank" rel="noopener">
-              Donor → School PDF
-            </a>
+            <a class="btn btn-primary btn-sm" href="#" target="_blank">▶ Watch Video (5 min)</a>
+            <a class="btn btn-outline btn-sm" style="margin-top:8px;" href="assets/pdfs/donor-to-school.pdf" target="_blank">⬇ Donor → School PDF</a>
           </div>
         </div>
       </section>
 
-      <!-- RESOURCES / WHITEPAPER -->
+      <!-- ——— RESOURCES ——— -->
       <section id="resources">
         <div class="section-header">
           <div class="section-eyebrow">Deep Dive</div>
           <h2>Whitepaper & Presentation Resources.</h2>
           <p class="lead">
-            For school leaders, attorneys, and strategic partners who want the full picture of the Graduation
-            Vault System design and roadmap.
+            For school leaders, attorneys, and partners who want the full picture of the Graduation Vault System.
           </p>
         </div>
 
@@ -794,73 +610,55 @@
             <div class="card-tag">Technical Overview</div>
             <h3>Graduation Vault System — 2025 Edition</h3>
             <p>
-              Formal whitepaper covering the architecture, control layer (SAFE smart accounts), 3-of-4 governance,
-              timelock modules, contribution model, legal framing, and risk management.
+              Architecture, SAFE smart accounts, multi-sig governance, time-lock modules,
+              contribution model, legal framing, and risk management.
             </p>
-            <a class="btn btn-outline btn-sm" href="assets/pdfs/gv-whitepaper-2025.pdf" target="_blank" rel="noopener">
-              Download Whitepaper (PDF)
-            </a>
+            <a class="btn btn-outline btn-sm" href="assets/pdfs/gv-whitepaper-2025.pdf" target="_blank">Download Whitepaper</a>
           </div>
 
           <div class="card">
             <div class="card-tag">Slides & Video</div>
             <h3>Presentation Deck & Explainer Video</h3>
-            <p>
-              Use the main Graduation Vaults slide deck and presentation video for parent nights,
-              micro-school pitches, and partner briefings.
-            </p>
-            <a class="btn btn-outline btn-sm" href="https://ipfs.io/ipfs/bafybeif6dip35jas73y5ozpk4vbjsqisagutep7cjhjtuktja7vqlhlm2a" target="_blank" rel="noopener">
-              View Slide Deck (IPFS)
-            </a>
-            <a class="btn btn-outline btn-sm" style="margin-top:6px;" href="https://ipfs.io/ipfs/bafybeicbyt6ex3d7v5mu6dmqtf773hysq4lm3ifzd7m4uyztdfxh25ivdq" target="_blank" rel="noopener">
-              Watch Presentation Video (IPFS)
-            </a>
+            <p>Use the main slide deck and presentation video for parent nights and school leadership briefings.</p>
+            <a class="btn btn-outline btn-sm" href="https://ipfs.io/ipfs/bafybeif6dip35jas73y5ozpk4vbjsqisagutep7cjhjtuktja7vqlhlm2a" target="_blank">View Slide Deck</a>
+            <a class="btn btn-outline btn-sm" style="margin-top:6px;" href="https://ipfs.io/ipfs/bafybeicbyt6ex3d7v5mu6dmqtf773hysq4lm3ifzd7m4uyztdfxh25ivdq" target="_blank">Watch Video</a>
           </div>
 
           <div class="card">
             <div class="card-tag">School Innovation</div>
             <h3>School Vault Governance Brief</h3>
-            <p>
-              One-page explainer for how the School Innovation Vault complements student vaults — ideal
-              for administrators and board members reviewing transparency and control.
-            </p>
-            <a class="btn btn-outline btn-sm" href="assets/pdfs/school-innovation-vault.pdf" target="_blank" rel="noopener">
-              Download School Vault PDF
-            </a>
+            <p>How the Innovation Vault complements student vaults with transparent, on-chain activity.</p>
+            <a class="btn btn-outline btn-sm" href="assets/pdfs/school-innovation-vault.pdf" target="_blank">Download School Vault PDF</a>
           </div>
         </div>
       </section>
 
-      <!-- DASHBOARD CTA -->
+      <!-- ——— DASHBOARD ——— -->
       <section id="dashboard">
         <div class="section-header">
           <div class="section-eyebrow">Live Transparency</div>
           <h2>View the Graduation Vaults Dashboard.</h2>
           <p class="lead">
-            The dashboard provides read-only, on-chain visibility into student vaults and school innovation vaults — 
-            without giving anyone withdrawal access from the UI.
+            Read-only visibility into student vaults and Innovation Vaults — without enabling withdrawals.
           </p>
         </div>
 
         <div class="cta-band">
           <p>
-            Use the dashboard to search student vaults, monitor donations, and confirm lock status at any time.
-            All balances, transactions, and governance events are recorded on-chain for permanent transparency.
+            Search vaults, monitor donations, and confirm lock status at any time.
+            All balances, transactions, and governance events are permanently recorded on-chain.
           </p>
-          <a class="btn btn-primary" href="https://self-defi.github.io/Graduation-Vaults/#/" target="_blank" rel="noopener">
-            Open Dashboard
-          </a>
+          <a class="btn btn-primary" href="https://self-defi.github.io/Graduation-Vaults/#/" target="_blank">Open Dashboard</a>
         </div>
       </section>
 
-      <!-- CONTACT / CONSULTATION -->
+      <!-- ——— CONTACT ——— -->
       <section id="contact">
         <div class="section-header">
           <div class="section-eyebrow">Next Steps</div>
           <h2>Bring Graduation Vaults to Your Microschool.</h2>
           <p class="lead">
-            Ready to pilot Graduation Vaults with your students or micro-school network? Book a short call to
-            review your use-case, legal review plan, and deployment options.
+            Ready to pilot Graduation Vaults with your network? Book a short call to review fit, legal review, and deployment steps.
           </p>
         </div>
 
@@ -868,46 +666,43 @@
           <div class="card">
             <div class="card-tag">Consultation</div>
             <h3>Book a 15-Minute Intro Call</h3>
-            <p>
-              Discuss implementation, onboarding, and how to position Graduation Vaults with your families,
-              board, or donor community.
-            </p>
-            <a class="btn btn-primary btn-sm" href="https://cal.com/selfdeficonsultant/15min" target="_blank" rel="noopener">
-              Schedule Consultation
-            </a>
+            <p>Discuss implementation and onboarding with your leadership, families, or donor community.</p>
+            <a class="btn btn-primary btn-sm" href="https://cal.com/selfdeficonsultant/15min" target="_blank">Schedule Consultation</a>
           </div>
 
           <div class="card">
             <div class="card-tag">Email</div>
             <h3>Questions or Legal Review?</h3>
             <p>
-              Need a copy of the whitepaper or onboarding packets for your legal or compliance team?
+              Need the whitepaper or onboarding packets for your legal team?
               Reach out and we’ll send a curated review bundle.
             </p>
-            <a class="btn btn-outline btn-sm" href="mailto:support@graduationvaults.com">
-              Email support@graduationvaults.com
-            </a>
+            <a class="btn btn-outline btn-sm" href="mailto:support@graduationvaults.com">Email support@graduationvaults.com</a>
           </div>
         </div>
       </section>
+
     </main>
 
-    <!-- FOOTER -->
+    <!-- ——— FOOTER ——— -->
     <footer class="site-footer">
       <div>
         © <span id="year"></span> Graduation Vaults — SD Advisory Group. All rights reserved.
         <br>
-        Graduation Vaults are donation-based, non-investment vaults. SD Advisory Group provides infrastructure only and does not custody assets or provide financial advice.
+        Graduation Vaults are donation-based, non-investment vaults. 
+        SD Advisory Group provides infrastructure only and does not custody assets or provide financial advice.
       </div>
+
       <div class="footer-right">
-        Sovereign Wealth Architecture — Powered by Self-Defi.
+        Digital Infrastructure Architect — Powered by Self-Defi.
       </div>
     </footer>
+
   </div>
 
   <script>
-    // Simple current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
